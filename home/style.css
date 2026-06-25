@@ -22,6 +22,21 @@ body {
     padding: 20px 8%;
     background-color: #1a1a1a;
     border-bottom: 1px solid #2d2d2d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-logo {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+nav ul {
+    align-items: center;
 }
 
 #title {
@@ -59,6 +74,7 @@ nav ul {
     display: flex;
     justify-content: center;
     padding: 60px 20px;
+    padding-top: 140px;
 }
 
 .home-section img {
@@ -73,4 +89,166 @@ nav ul {
 .home-section img:hover {
     transform: scale(1.02);
     box-shadow: 0 15px 40px rgba(255, 193, 7, 0.3);
+}
+
+.highlight-section {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    padding: 30px 8%;        
+    gap: 20px;               
+}
+
+.genre-title {
+    font-size: 28px;
+    color: #ffc107;          
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* ფოტოების კონტეინერი */
+.posters-container {
+    display: flex;
+    flex-direction: row;     
+    gap: 220px; /* შევამცირეთ, რადგან გახსნილი ყუთები თავად დაიკავებენ ადგილს */
+}
+
+/* თითოეული ბარათის კონტეინერი - აერთიანებს ფოტოს და მის გვერდით გასახსნელ ყუთს */
+.poster-card-yellow,
+.poster-card-lightblue,
+.poster-card-green {
+    display: flex;
+    position: relative;
+}
+
+/* თითოეული ფოტოს ბარათის საერთო სტილი */
+.poster-card-yellow img,
+.poster-card-lightblue img,
+.poster-card-green img {
+    width: 220px;            
+    height: 310px;           
+    object-fit: cover;
+    border-radius: 12px;     
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    z-index: 2; /* ფოტო ყუთზე ზემოდან უნდა იჯდეს */
+}
+
+/* საერთო Hover ეფექტი - ყველა დიდდება */
+.poster-card-yellow img:hover,
+.poster-card-lightblue img:hover,
+.poster-card-green img:hover {
+    transform: scale(1.04);
+}
+
+/* --- ინდივიდუალური Glowing ფერები --- */
+.poster-card-yellow img:hover { box-shadow: 0 15px 40px rgba(238, 206, 24, 0.7); }
+.poster-card-lightblue img:hover { box-shadow: 0 15px 40px rgba(29, 185, 224, 0.8); }
+.poster-card-green img:hover { box-shadow: 0 15px 40px rgba(15, 189, 59, 0.6); }
+
+
+/* --- საინფორმაციო ყუთის სტილები --- */
+.info-box {
+    width: 200px;
+    height: 310px; /* ზუსტად პოსტერის სიმაღლე */
+    background-color: #1a1a1a;
+    padding: 20px;
+    
+    /* დამრგვალება მხოლოდ მარჯვენა მხარეს, მარცხნივ კი სწორია და ებჯინება ფოტოს */
+    border-radius: 0 12px 12px 0; 
+    border: 1px solid #2d2d2d;
+    border-left: none; /* მარცხენა საზღვარი სრულად გამქრალია */
+    
+    /* პოზიციონირება - მიბჯენილია ფოტოს მარჯვენა კიდეზე */
+    position: absolute;
+    left: 215px; /* ფოტოს სიგანეს მორგებული, რომ ოდნავ შევიდეს ჰოვერის ქვეშ */
+    top: 0;
+    z-index: 1; /* ფოტოს უკან ექცევა */
+    
+    /* საწყის მდგომარეობაში ყუთი დამალულია */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px); /* ეფექტისთვის - ოდნავ მარცხნიდან გამოდის */
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+    
+    /* ტექსტის სტილი შიგნით */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ტექსტის გალამაზება ყუთში */
+.info-box h3 { color: #ffc107; font-size: 18px; }
+.info-box p { color: #cccccc; font-size: 13px; line-height: 1.4; }
+
+/* --- ეფექტი: მაუსის მიტანისას ყუთის გამოჩენა --- */
+.poster-card-yellow:hover .info-box,
+.poster-card-lightblue:hover .info-box,
+.poster-card-green:hover .info-box {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0); /* ბრუნდება თავის ადგილას */
+}
+
+/* დრამის ახალი ბარათების საერთო სტილი (რათა კომედიასავით იმუშაოს) */
+.poster-card-orange,
+.poster-card-red,
+.poster-card-purple {
+    display: flex;
+    position: relative;
+}
+
+.poster-card-orange img,
+.poster-card-red img,
+.poster-card-purple img {
+    width: 220px;            
+    height: 310px;           
+    object-fit: cover;
+    border-radius: 12px;     
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* საერთო Hover - დიდება */
+.poster-card-orange img:hover,
+.poster-card-red img:hover,
+.poster-card-purple img:hover {
+    transform: scale(1.04);
+}
+
+/* ყუთის გამოჩენის ეფექტი დრამისთვის */
+.poster-card-orange:hover .info-box,
+.poster-card-red:hover .info-box,
+.poster-card-purple:hover .info-box {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+/* --- დრამის ფილმების ინდივიდუალური Glowing ფერები --- */
+
+/* 1. ნატვრის ხე - თბილი ნარინჯისფერი (Orange) */
+.poster-card-orange img:hover {
+    box-shadow: 0 15px 40px rgba(19, 3, 107, 0.863);
+}
+
+/* 2. ჯარისკაცის მამა - დრამატული წითელი (Red) */
+.poster-card-red img:hover {
+    box-shadow: 0 15px 40px rgba(226, 28, 25, 0.774);
+}
+
+/* 3. მონანიება - მისტიკური იასამნისფერი (Purple) */
+.poster-card-purple img:hover {
+    box-shadow: 0 15px 40px rgba(129, 11, 11, 0.7);
+}
+
+/* აიძულებს დრამის სექციას დაიკავოს თავისი ადგილი კომედიის ქვემოთ */
+.highlight-section {
+    position: relative;
+    clear: both;
+    display: flex;
+    flex-direction: column;
 }

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>კინოკლასიკა | კონტაქტი</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+GO:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../contact/style.css">
+</head>
+<body>
+
+    <header class="header-container">
+        <h1 id="title">
+            <a href="../index.html">კინოკლასიკა</a>
+        </h1>
+
+        <nav>
+            <ul>
+                <li>
+                    <a class="navigation" href="../index.html">მთავარი</a>
+                </li>
+                <li class="about-item">
+                    <a class="navigation" href="../movies/index.html">ფილმები</a>
+                </li>
+                <li class="services-item">
+                    <a class="navigation" href="../news/index.html">სიახლე</a>
+                </li>
+                <li class="news-item">
+                    <a class="navigation" href="../aboutus/index.html">ჩვენს შესახებ</a>
+                </li>
+                <li class="contact-item">
+                    <a id="active" class="navigation">კონტაქტი</a>
+                </li>
+                <li>
+                    <a href="https://tbcbank.ge/ka/tbc-education" target="_blank">
+                        <img class="nav-logo" src="../images/tbc-logo.png">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+<main class="main-content">
+    <h2 class="page-main-title">ფილმები, რომელთა ნახვაც გსურთ ვებგვერდზე</h2>
+    
+    <section class="form-section">
+        <p class="form-subtitle">აირჩიეთ სასურველი კატეგორია, მიუთითეთ ჟანრი და გამოგვიგზავნეთ თქვენი საყვარელი ქართული ფილმები, რომელთა ნახვასაც აქ ისურვებდით.</p>
+
+        <form action="#" method="POST" class="request-form">
+            <div class="input-group">
+                <label for="username">თქვენი სახელი და გვარი:</label>
+                <input type="text" id="username" name="username" placeholder="მაგ: გიორგი ბერიძე" required>
+            </div>
+
+            <div class="input-group">
+                <label for="movie-title">ფილმის დასახელება:</label>
+                <input type="text" id="movie-title" name="movie-title" placeholder="მაგ: შერეკილები" required>
+            </div>
+
+            <div class="input-group">
+                <label for="movie-genre">აირჩიეთ ფილმის ჟანრი:</label>
+                <select id="movie-genre" name="movie-genre" required>
+                    <option value="" disabled selected>-- აირჩიეთ ჟანრი --</option>
+                    <option value="comedy">კომედია</option>
+                    <option value="drama">დრამა</option>
+                    <option value="football">ქართული ფეხბურთი</option>
+                    <option value="melodrama">მელოდრამა</option>
+                    <option value="historical">ისტორიული</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="description">დამატებითი ინფორმაცია / აღწერა:</label>
+                <textarea id="description" name="description" placeholder="მოგვიყევით მოკლედ თქვენი მოთხოვნის ან ფილმის შესახებ..." rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">გაგზავნა</button>
+
+        </form>
+    </section>
+</main>
+
+    <footer class="footer-container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2>კინოკლასიკა</h2>
+                <p>აღმოაჩინე ძველი ქართული კინო ახლებურად</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="../index.html">მთავარი</a>
+                <a href="../movies/index.html">ფილმები</a>
+                <a href="../news/index.html">სიახლე</a>
+                <a href="../aboutus/index.html">ჩვენს შესახებ</a>
+                <a href="../contact/index.html">კონტაქტი</a>
+            </div>
+
+            <div class="footer-logo">
+                <a href="https://tbcbank.ge/ka/tbc-education" target="_blank">
+                    <img src="../images/tbc-logo.png">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

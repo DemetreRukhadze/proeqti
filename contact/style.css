@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Fira GO', sans-serif;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #2d2d2d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#title {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#title a {
+    text-decoration: none;
+    color: #ffc107;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navigation {
+    text-decoration: none;
+    color: #aaaaaa;
+    font-size: 16px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.navigation:hover {
+    color: #ffffff;
+}
+
+#active {
+    color: #ffc107;
+    font-weight: 700;
+    cursor: default;
+}
+
+.nav-logo {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+/* ძირითადი კონტენტის კონტეინერი */
+.main-content {
+    padding-top: 140px; /* ჰედერის ქვეშ რომ არ შევარდეს */
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column; /* სათაური და ფორმა ერთმანეთის ქვეშ რომ განლაგდეს */
+    align-items: center;
+    justify-content: center;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+/* 🌟 ახალი: დიდი ცენტრალური სათაურის სტილი */
+.page-main-title {
+    color: #ffc107;
+    font-size: 36px; /* დიდი ზომა */
+    font-weight: 700;
+    text-align: center; /* ცენტრში გასწორება */
+    letter-spacing: 1px;
+    margin-bottom: 30px; /* ფორმისგან დაშორება */
+    text-transform: uppercase;
+}
+
+/* ფორმის მთავარი ბარათი */
+.form-section {
+    max-width: 600px;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #2d2d2d;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+}
+
+.form-subtitle {
+    color: #aaaaaa;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    text-align: center; /* სუბტიტრიც ცენტრში იყოს ლამაზად */
+}
+
+/* ფორმის შიდა სტრუქტურა */
+.request-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ინპუტების ჯგუფები */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    color: #cccccc;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* ჩასაწერი ყუთები, სელექტები და ტექსტარეა */
+.input-group input[type="text"],
+.input-group select,
+.input-group textarea {
+    padding: 12px;
+    background-color: #121212;
+    border: 1px solid #2d2d2d;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Fira GO', sans-serif;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* ფოკუსის ეფექტი ჩაწერისას */
+.input-group input[type="text"]:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: #ffc107;
+}
+
+.input-group textarea {
+    resize: none;
+}
+
+/* გაგზავნის ღილაკი */
+.submit-btn {
+    background-color: #ffc107;
+    color: #121212;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'Fira GO', sans-serif;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #e0a800;
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+.footer-container {
+    background-color: #1a1a1a;
+    border-top: 1px solid #2d2d2d;
+    padding: 40px 8%;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-brand h2 {
+    color: #ffc107;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.footer-brand p {
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #aaaaaa;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.footer-logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.05);
+}

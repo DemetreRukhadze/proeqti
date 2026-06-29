@@ -1,7 +1,9 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 #title a {
@@ -17,16 +19,28 @@ body {
 }
 
 .header-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+       -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+       -ms-flex-align: center;
+            align-items: center;
     padding: 20px 8%;
-    background-color: #1a1a1a;
-    border-bottom: 1px solid #2d2d2d;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #2d2d2d;
     z-index: 1000;
 }
 
@@ -45,8 +59,16 @@ body {
 
 nav ul {
     list-style: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+       -ms-flex-align: center;
+            align-items: center;
     gap: 30px;
 }
 
@@ -55,6 +77,9 @@ nav ul {
     color: #aaaaaa;
     font-size: 16px;
     font-weight: 400;
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
     transition: color 0.3s ease;
 }
 
@@ -68,49 +93,21 @@ nav ul {
     cursor: default;
 }
 
-/* ჩამოწევს ფილმების ბადეს ფიქსირებული ჰედერის ქვემოთ */
-main {
-    padding-top: 160px; 
-    min-height: 80vh;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-left: 8%;
-    padding-right: 8%;
-}
-
-/* ფილმების ბადე Grid-ით - 3 თანაბარი სვეტი */
 .posters-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px 30px; 
-}
-
-/* მოვუხსნათ <summary>-ს ბრაუზერის სტანდარტული ისარი */
-summary {
-    list-style: none;
-    cursor: pointer;
-}
-summary::-webkit-details-marker {
-    display: none;
-}
-
-/* როცა ფილმი იხსნება, მისი ინფორმაცია იკავებს მთელ ხაზს (3-ვე სვეტს) */
-.movie-box[open] {
-    grid-column: 1 / -1; 
-}
-
-/* საინფორმაციო ბლოკის ვიზუალი (გამოჩნდება პოსტერის ქვემოთ) */
-.movie-info-content {
-    background-color: #1a1a1a;
-    border: 1px solid #ffc107;
-    padding: 25px;
-    margin-top: 20px;
-    border-radius: 8px;
-    text-align: left;
-}
-.movie-info-content h2 {
-    color: #ffc107;
-    margin-bottom: 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; 
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+       -ms-flex-pack: justify;
+            justify-content: space-between; 
+    gap: 40px 30px;
 }
 
 /* ფუტერის სტილები */
@@ -123,9 +120,21 @@ summary::-webkit-details-marker {
 }
 
 .footer-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+       -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+       -ms-flex-align: center;
+            align-items: center;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -142,6 +151,10 @@ summary::-webkit-details-marker {
 }
 
 .footer-links {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 25px;
 }
@@ -150,6 +163,9 @@ summary::-webkit-details-marker {
     text-decoration: none;
     color: #aaaaaa;
     font-size: 15px;
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
     transition: color 0.3s ease;
 }
 
@@ -161,9 +177,82 @@ summary::-webkit-details-marker {
     height: 50px;
     width: auto;
     display: block;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: o-transform 0.3s ease;
+    -moz-transition: transform 0.3s ease, -moz-transform 0.3s ease;
     transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease, -moz-transform 0.3s ease, -o-transform 0.3s ease;
 }
 
 .footer-logo img:hover {
-    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+       -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+         -o-transform: scale(1.05);
+            transform: scale(1.05);
+}
+
+@media screen and (max-width: 992px) {
+    .header-container, .footer-container {
+        padding: 20px 4%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        position: static;
+    }
+
+    nav ul {
+        gap: 15px;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+           -moz-box-pack: center;
+           -ms-flex-pack: center;
+                justify-content: center;
+    }
+
+    .posters-container {
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+           -moz-box-pack: center;
+           -ms-flex-pack: center;
+                justify-content: center;
+    }
+
+    .footer-content {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .footer-links {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        gap: 12px;
+    }
 }

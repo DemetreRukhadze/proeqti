@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>კინოკლასიკა | სიახლეები</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+GO:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../news/style.css">
+</head>
+<body>
+
+    <header class="header-container">
+        <h1 id="title">
+            <a href="../index.html">კინოკლასიკა</a>
+        </h1>
+
+        <nav>
+            <ul>
+                <li>
+                    <a class="navigation" href="../index.html">მთავარი</a>
+                </li>
+                <li class="movies-item">
+                    <a class="navigation" href="../movies/index.html">ფილმები</a>
+                </li>
+                <li class="news-item">
+                    <a id="active" class="navigation">სიახლე</a>
+                </li>
+                <li class="aboutus-item">
+                    <a class="navigation" href="../aboutus/index.html">ჩვენს შესახებ</a>
+                </li>
+                <li class="contact-item">
+                    <a class="navigation" href="../contact/index.html">კონტაქტი</a>
+                </li>
+                <li>
+                    <a href="https://tbcbank.ge/ka/tbc-education" target="_blank">
+                        <img class="nav-logo" src="../images/tbc-logo.png">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <h1 class="page-main-title">გამოიცანი ქართული ფილმი ემოჯიებით</h1>
+        <p class="quiz-subtitle">შეამოწმე, რამდენად კარგად იცნობ ძველ ქართულ ფილმებს</p>
+
+        <div class="quiz-container single-window-quiz">
+            
+            <input type="radio" id="q1-trigger" name="quiz-flow" checked class="step-trigger">
+            <div class="quiz-step step-1">
+                <div class="quiz-image">
+                    <img src="../images/quiz1.jpg" alt="ფილმის კადრი">
+                </div>
+                <div class="quiz-options dynamic-hints">
+                    <input type="radio" id="q1-opt1" name="q1" class="wrong-input opt1-radio">
+                    <input type="radio" id="q1-opt2" name="q1" class="correct-input opt2-radio">
+                    <input type="radio" id="q1-opt3" name="q1" class="wrong-input opt3-radio">
+                    <input type="radio" id="q1-opt4" name="q1" class="wrong-input opt4-radio">
+
+                    <label for="q1-opt1" class="option-btn btn-1">პირველი მერცხალი</label>
+                    <label for="q1-opt2" class="option-btn btn-2">ცისფერი მთები ანუ დაუჯერებელი ამბავი</label>
+                    <label for="q1-opt3" class="option-btn btn-3">უდიპლომო სასიძო</label>
+                    <label for="q1-opt4" class="option-btn btn-4">შერეკილები</label>
+
+                    <label for="q2-trigger" class="next-step-btn">შემდეგი კითხვა 👉</label>
+                </div>
+            </div>
+
+            <input type="radio" id="q2-trigger" name="quiz-flow" class="step-trigger">
+            <div class="quiz-step step-2">
+                <div class="quiz-image">
+                    <img src="../images/quiz2.jpg" alt="ფილმის კადრი">
+                </div>
+                <div class="quiz-options dynamic-hints">
+                    <input type="radio" id="q2-opt1" name="q2" class="wrong-input opt1-radio">
+                    <input type="radio" id="q2-opt2" name="q2" class="wrong-input opt2-radio">
+                    <input type="radio" id="q2-opt3" name="q2" class="correct-input opt3-radio">
+                    <input type="radio" id="q2-opt4" name="q2" class="wrong-input opt4-radio">
+
+                    <label for="q2-opt1" class="option-btn btn-1">ჯარისკაცის მამა</label>
+                    <label for="q2-opt2" class="option-btn btn-2">ნატვრის ხე</label>
+                    <label for="q2-opt3" class="option-btn btn-3">ნერგები</label>
+                    <label for="q2-opt4" class="option-btn btn-4">ღიმილის ბიჭები</label>
+
+                    <label for="q3-trigger" class="next-step-btn">შემდეგი კითხვა 👉</label>
+                </div>
+            </div>
+
+            <input type="radio" id="q3-trigger" name="quiz-flow" class="step-trigger">
+            <div class="quiz-step step-3">
+                <div class="quiz-image">
+                    <img src="../images/quiz3.jpg" alt="ფილმის კადრი">
+                </div>
+                <div class="quiz-options dynamic-hints">
+                    <input type="radio" id="q3-opt1" name="q3" class="wrong-input opt1-radio">
+                    <input type="radio" id="q3-opt2" name="q3" class="wrong-input opt2-radio">
+                    <input type="radio" id="q3-opt3" name="q3" class="wrong-input opt3-radio">
+                    <input type="radio" id="q3-opt4" name="q3" class="correct-input opt4-radio">
+
+                    <label for="q3-opt1" class="option-btn btn-1">გიორგი სააკაძე</label>
+                    <label for="q3-opt2" class="option-btn btn-2">მამლუქი</label>
+                    <label for="q3-opt3" class="option-btn btn-3">ერეკლე მეფე</label>
+                    <label for="q3-opt4" class="option-btn btn-4">რაც გინახავს, ვეღარ ნახავ</label>
+
+                    <label for="quiz-final-trigger" class="next-step-btn">შედეგების ნახვა 🎉</label>
+                </div>
+            </div>
+
+            <input type="radio" id="quiz-final-trigger" name="quiz-flow" class="step-trigger">
+            <div class="quiz-step final-step">
+                <div class="quiz-results-card">
+                    <h2>🎉 ქვიზი დასრულდა!</h2>
+                    <p>შენ წარმატებით გაიარე ტესტი ძველ ქართულ ფილმებზე.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer-container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2>კინოკლასიკა</h2>
+                <p>აღმოაჩინე ძველი ქართული კინო ახლებურად</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="../index.html">მთავარი</a>
+                <a href="../movies/index.html">ფილმები</a>
+                <a href="../aboutus/index.html">ჩვენს შესახებ</a>
+                <a href="../contact/index.html">კონტაქტი</a>
+            </div>
+
+            <div class="footer-logo">
+                <a href="https://tbcbank.ge/ka/tbc-education" target="_blank">
+                    <img src="../images/tbc-logo.png">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

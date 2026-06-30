@@ -6,6 +6,10 @@
             box-sizing: border-box;
 }
 
+html {
+    scroll-padding-top: 160px;
+}
+
 #title a {
     text-decoration: none;
     color: #ffc107;
@@ -90,7 +94,7 @@ nav ul {
 #active {
     color: #ffc107;
     font-weight: 700;
-    cursor: default;
+    cursor: pointer;
 }
 
 .main-content {
@@ -173,15 +177,12 @@ nav ul {
 }
 
 .movie-poster img {
-    width: 100%;
-    height: auto;
+    width: 280px;
+    height: 400px;
+    object-fit: cover;
     display: block;
-    -webkit-border-radius: 8px;
-       -moz-border-radius: 8px;
-            border-radius: 8px;
-    -webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-       -moz-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .movie-info {

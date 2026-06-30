@@ -110,7 +110,73 @@ nav ul {
     gap: 40px 30px;
 }
 
-/* ფუტერის სტილები */
+.poster-card-yellow,
+.poster-card-lightblue,
+.poster-card-green,
+.poster-card-brown,
+.poster-card-blue,
+.poster-card-red,
+.poster-card-darkred,
+.poster-card-white {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+}
+
+.poster-card-yellow img,
+.poster-card-lightblue img,
+.poster-card-green img,
+.poster-card-brown img,
+.poster-card-blue img,
+.poster-card-red img,
+.poster-card-darkred img,
+.poster-card-white img {
+    width: 220px;            
+    height: 310px;           
+    object-fit: cover;
+    -webkit-border-radius: 12px;
+       -moz-border-radius: 12px;
+            border-radius: 12px;     
+    -webkit-box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+       -moz-box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    -webkit-transition: -webkit-transform 0.4s ease, -webkit-box-shadow 0.4s ease;
+    transition: -webkit-transform 0.4s ease, -webkit-box-shadow 0.4s ease;
+    -o-transition: transform 0.4s ease, box-shadow 0.4s ease;
+    -moz-transition: transform 0.4s ease, box-shadow 0.4s ease, -moz-transform 0.4s ease, -moz-box-shadow 0.4s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, -webkit-transform 0.4s ease, -moz-transform 0.4s ease, -webkit-box-shadow 0.4s ease, -moz-box-shadow 0.4s ease;
+    cursor: pointer;
+    z-index: 2; 
+}
+
+.poster-card-yellow img:hover,
+.poster-card-lightblue img:hover,
+.poster-card-green img:hover,
+.poster-card-brown img:hover,
+.poster-card-blue img:hover,
+.poster-card-red img:hover,
+.poster-card-darkred img:hover,
+.poster-card-white img:hover {
+    -webkit-transform: scale(1.04);
+       -moz-transform: scale(1.04);
+        -ms-transform: scale(1.04);
+         -o-transform: scale(1.04);
+            transform: scale(1.04);
+}
+
+.poster-card-yellow img:hover { -webkit-box-shadow: 0 15px 40px rgba(238, 206, 24, 0.7); -moz-box-shadow: 0 15px 40px rgba(238, 206, 24, 0.7); box-shadow: 0 15px 40px rgba(238, 206, 24, 0.7); }
+.poster-card-lightblue img:hover { -webkit-box-shadow: 0 15px 40px rgba(29, 185, 224, 0.8); -moz-box-shadow: 0 15px 40px rgba(29, 185, 224, 0.8); box-shadow: 0 15px 40px rgba(29, 185, 224, 0.8); }
+.poster-card-green img:hover { -webkit-box-shadow: 0 15px 40px rgba(15, 189, 59, 0.6); -moz-box-shadow: 0 15px 40px rgba(15, 189, 59, 0.6); box-shadow: 0 15px 40px rgba(15, 189, 59, 0.6); }
+.poster-card-brown img:hover { -webkit-box-shadow: 0 15px 40px rgba(83, 42, 4, 0.932); -moz-box-shadow: 0 15px 40px rgba(83, 42, 4, 0.932); box-shadow: 0 15px 40px rgba(83, 42, 4, 0.932); }
+.poster-card-blue img:hover { -webkit-box-shadow: 0 15px 40px rgba(19, 3, 107, 0.863); -moz-box-shadow: 0 15px 40px rgba(19, 3, 107, 0.863); box-shadow: 0 15px 40px rgba(19, 3, 107, 0.863); }
+.poster-card-red img:hover { -webkit-box-shadow: 0 15px 40px rgba(226, 28, 25, 0.774); -moz-box-shadow: 0 15px 40px rgba(226, 28, 25, 0.774); box-shadow: 0 15px 40px rgba(226, 28, 25, 0.774); }
+.poster-card-darkred img:hover { -webkit-box-shadow: 0 15px 40px rgba(129, 11, 11, 0.7); -moz-box-shadow: 0 15px 40px rgba(129, 11, 11, 0.7); box-shadow: 0 15px 40px rgba(129, 11, 11, 0.7); }
+.poster-card-white img:hover { -webkit-box-shadow: 0 15px 40px rgba(243, 242, 242, 0.842); -moz-box-shadow: 0 15px 40px rgba(243, 242, 242, 0.842); box-shadow: 0 15px 40px rgba(243, 242, 242, 0.842); }
+
 .footer-container {
     background-color: #1a1a1a;
     border-top: 1px solid #2d2d2d;
@@ -191,6 +257,35 @@ nav ul {
         -ms-transform: scale(1.05);
          -o-transform: scale(1.05);
             transform: scale(1.05);
+}
+
+@media screen and (max-width: 1100px) {
+    .posters-container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        gap: 30px;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+           -ms-flex-align: center;
+                align-items: center;
+    }
+
+    .poster-card-yellow, .poster-card-lightblue, .poster-card-green, 
+    .poster-card-brown, .poster-card-blue, .poster-card-darkred, .poster-card-red {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 992px) {

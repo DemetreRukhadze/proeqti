@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+#title a {
+    text-decoration: none;
+    color: #ffc107;
+    cursor: pointer;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Fira GO', sans-serif;
+}
+
+.header-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+       -ms-flex-align: center;
+            align-items: center;
+    padding: 20px 8%;
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #2d2d2d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-logo {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+#title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffc107;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+       -ms-flex-align: center;
+            align-items: center;
+    gap: 30px;
+}
+
+.navigation {
+    text-decoration: none;
+    color: #aaaaaa;
+    font-size: 16px;
+    font-weight: 400;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+.navigation:hover {
+    color: #ffffff;
+}
+
+#active {
+    color: #ffc107;
+    font-weight: 700;
+    cursor: default;
+}
+
+/* ძირითადი კონტეინერი */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 1. ჰერო სექცია */
+.about-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('../images/news5.png') no-repeat center/cover;
+    height: 450px;
+    background-position: center 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+/* 2. მისია (ორი სვეტი) */
+.mission-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 80px 0;
+}
+.mission-image-block, .mission-text-block {
+    flex: 1;
+}
+
+/* სათაურის ქვემოთ აკეთებს სივრცეს */
+.mission-text-block h2 {
+    margin-bottom: 20px; 
+}
+
+/* ტექსტის ქვემოთ აკეთებს სივრცეს, რომ ღილაკს არ მიეყუდოს */
+.mission-text-block p {
+    margin-bottom: 30px; 
+    line-height: 1.6; /* ეს ხაზებს შორის მანძილსაც ზრდის, რომ უფრო მარტივად წასაკითხი იყოს */
+}
+
+/* Fancy Border Radius ეფექტი ფოტოსთვის */
+.vintage-frame img {
+    width: 100%;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* აი აქ მუშაობს fancy-border-radius */
+    transition: all 0.5s ease;
+}
+.vintage-frame img:hover {
+    border-radius: 50% 50% 50% 50%; /* ჰოვერზე სწორდება */
+}
+
+/* ღილაკის Hover ეფექტი */
+.btn-primary {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #ffc107; /* კინო თემატიკის წითელი */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.btn-primary:hover {
+    transform: translateY(-3px);
+    background-color: #da8626;
+}
+
+/* 3. სტატისტიკა (Grid) */
+.about-stats {
+    background-color: #000000;
+    padding: 60px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.stat-card i {
+    font-size: 2.5rem;
+    color: #e50914;
+    margin-bottom: 15px;
+}
+
+.about-faq {
+    padding: 80px 0;
+    background-color: #121212;
+}
+
+.about-faq .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+/* კითხვების ერთ ხაზზე (გვერდიგვერდ) განთავსება */
+.faq-row {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start; /* რომ ჩამოშლისას სხვა ბლოკები არ გაიწელოს სიმაღლეში */
+}
+
+/* თითოეული ბლოკი თანაბარ ზომას იკავებს */
+.faq-item {
+    flex: 1; 
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    border-top: 4px solid #ffc107; /* წითელი ხაზი ზემოდან */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-3px);
+}
+
+/* კითხვის სათაურის სტილი (ღილაკივით მუშაობს) */
+.faq-item summary {
+    padding: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none; /* აქრობს ბრაუზერის სტანდარტულ ისარს */
+    position: relative;
+    outline: none;
+    color: #ffffff;
+}
+
+/* პატარა პლიუსის (+) ეფექტი კითხვის ბოლოში */
+.faq-item summary::after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    font-size: 1.2rem;
+    color: #ffc107;
+    transition: transform 0.3s ease;
+}
+
+/* როცა კითხვა ღიაა, პლიუსი ტრიალდება და ხდება იქსიკი (x) */
+.faq-item[open] summary::after {
+    transform: rotate(45deg);
+}
+
+/* ჩამოსაშლელი პასუხის კონტეინერი */
+.faq-answer {
+    padding: 0 20px 20px 20px;
+    animation: slideDown 0.3s ease; /* ნაზი გამოჩენის ანიმაცია */
+    height: 210px;
+}
+
+.faq-answer p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #666;
+    margin: 0;
+}
+
+/* ანიმაცია პასუხის ჩამოშლისთვის */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* სოციალური აიქონების ჰოვერი */
+.team-socials a:hover {
+    color: #e50914;
+}
+
+.footer-container {
+    background-color: #1a1a1a;
+    border-top: 1px solid #2d2d2d;
+    padding: 40px 8%;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.footer-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+       -ms-flex-align: center;
+            align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-brand h2 {
+    color: #ffc107;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.footer-brand p {
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #aaaaaa;
+    font-size: 15px;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.footer-logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.footer-logo img:hover {
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+}

@@ -80,14 +80,12 @@ nav ul {
     cursor: default;
 }
 
-/* ძირითადი კონტეინერი */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* 1. ჰერო სექცია */
 .about-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('../images/news5.png') no-repeat center/cover;
     height: 450px;
@@ -99,7 +97,6 @@ nav ul {
     color: #fff;
 }
 
-/* 2. მისია (ორი სვეტი) */
 .mission-wrapper {
     display: flex;
     align-items: center;
@@ -110,32 +107,28 @@ nav ul {
     flex: 1;
 }
 
-/* სათაურის ქვემოთ აკეთებს სივრცეს */
 .mission-text-block h2 {
     margin-bottom: 20px; 
 }
 
-/* ტექსტის ქვემოთ აკეთებს სივრცეს, რომ ღილაკს არ მიეყუდოს */
 .mission-text-block p {
     margin-bottom: 30px; 
-    line-height: 1.6; /* ეს ხაზებს შორის მანძილსაც ზრდის, რომ უფრო მარტივად წასაკითხი იყოს */
+    line-height: 1.6;
 }
 
-/* Fancy Border Radius ეფექტი ფოტოსთვის */
 .vintage-frame img {
     width: 100%;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* აი აქ მუშაობს fancy-border-radius */
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     transition: all 0.5s ease;
 }
 .vintage-frame img:hover {
-    border-radius: 50% 50% 50% 50%; /* ჰოვერზე სწორდება */
+    border-radius: 50% 50% 50% 50%;
 }
 
-/* ღილაკის Hover ეფექტი */
 .btn-primary {
     display: inline-block;
     padding: 12px 28px;
-    background-color: #ffc107; /* კინო თემატიკის წითელი */
+    background-color: #ffc107;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -146,7 +139,6 @@ nav ul {
     background-color: #da8626;
 }
 
-/* 3. სტატისტიკა (Grid) */
 .about-stats {
     background-color: #000000;
     padding: 60px 0;
@@ -157,12 +149,6 @@ nav ul {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     text-align: center;
-}
-
-.stat-card i {
-    font-size: 2.5rem;
-    color: #e50914;
-    margin-bottom: 15px;
 }
 
 .about-faq {
@@ -176,19 +162,17 @@ nav ul {
     font-size: 2rem;
 }
 
-/* კითხვების ერთ ხაზზე (გვერდიგვერდ) განთავსება */
 .faq-row {
     display: flex;
     gap: 20px;
-    align-items: flex-start; /* რომ ჩამოშლისას სხვა ბლოკები არ გაიწელოს სიმაღლეში */
+    align-items: flex-start;
 }
 
-/* თითოეული ბლოკი თანაბარ ზომას იკავებს */
 .faq-item {
     flex: 1; 
     background-color: #1a1a1a;
     border-radius: 8px;
-    border-top: 4px solid #ffc107; /* წითელი ხაზი ზემოდან */
+    border-top: 4px solid #ffc107;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     transition: transform 0.3s ease;
@@ -198,19 +182,17 @@ nav ul {
     transform: translateY(-3px);
 }
 
-/* კითხვის სათაურის სტილი (ღილაკივით მუშაობს) */
 .faq-item summary {
     padding: 20px;
     font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
-    list-style: none; /* აქრობს ბრაუზერის სტანდარტულ ისარს */
+    list-style: none;
     position: relative;
     outline: none;
     color: #ffffff;
 }
 
-/* პატარა პლიუსის (+) ეფექტი კითხვის ბოლოში */
 .faq-item summary::after {
     content: '+';
     position: absolute;
@@ -220,15 +202,13 @@ nav ul {
     transition: transform 0.3s ease;
 }
 
-/* როცა კითხვა ღიაა, პლიუსი ტრიალდება და ხდება იქსიკი (x) */
 .faq-item[open] summary::after {
     transform: rotate(45deg);
 }
 
-/* ჩამოსაშლელი პასუხის კონტეინერი */
 .faq-answer {
     padding: 0 20px 20px 20px;
-    animation: slideDown 0.3s ease; /* ნაზი გამოჩენის ანიმაცია */
+    animation: slideDown 0.3s ease;
     height: 210px;
 }
 
@@ -239,15 +219,9 @@ nav ul {
     margin: 0;
 }
 
-/* ანიმაცია პასუხის ჩამოშლისთვის */
 @keyframes slideDown {
     from { opacity: 0; transform: translateY(-5px); }
     to { opacity: 1; transform: translateY(0); }
-}
-
-/* სოციალური აიქონების ჰოვერი */
-.team-socials a:hover {
-    color: #e50914;
 }
 
 .footer-container {

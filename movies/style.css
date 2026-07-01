@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
             box-sizing: border-box;
 }
 
@@ -20,18 +19,12 @@ body {
 
 .header-container {
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-       -moz-box-pack: justify;
        -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-box-align: center;
-    -webkit-align-items: center;
-       -moz-box-align: center;
        -ms-flex-align: center;
             align-items: center;
     padding: 20px 8%;
@@ -60,13 +53,9 @@ body {
 nav ul {
     list-style: none;
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -webkit-align-items: center;
-       -moz-box-align: center;
        -ms-flex-align: center;
             align-items: center;
     gap: 30px;
@@ -78,8 +67,6 @@ nav ul {
     font-size: 16px;
     font-weight: 400;
     -webkit-transition: color 0.3s ease;
-    -o-transition: color 0.3s ease;
-    -moz-transition: color 0.3s ease;
     transition: color 0.3s ease;
 }
 
@@ -95,16 +82,11 @@ nav ul {
 
 .posters-container {
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap; 
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; 
     -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-       -moz-box-pack: justify;
        -ms-flex-pack: justify;
             justify-content: space-between; 
     gap: 40px 30px;
@@ -119,8 +101,6 @@ nav ul {
 .poster-card-darkred,
 .poster-card-white {
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     position: relative;
@@ -136,19 +116,15 @@ nav ul {
 .poster-card-white img {
     width: 220px;            
     height: 310px;           
-    object-fit: cover;
-    -webkit-border-radius: 12px;
-       -moz-border-radius: 12px;
-            border-radius: 12px;     
+    -o-object-fit: cover;           
+       object-fit: cover;
+    border-radius: 12px;     
     -webkit-box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-       -moz-box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
     -webkit-transition: -webkit-transform 0.4s ease, -webkit-box-shadow 0.4s ease;
     transition: -webkit-transform 0.4s ease, -webkit-box-shadow 0.4s ease;
-    -o-transition: transform 0.4s ease, box-shadow 0.4s ease;
-    -moz-transition: transform 0.4s ease, box-shadow 0.4s ease, -moz-transform 0.4s ease, -moz-box-shadow 0.4s ease;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
-    transition: transform 0.4s ease, box-shadow 0.4s ease, -webkit-transform 0.4s ease, -moz-transform 0.4s ease, -webkit-box-shadow 0.4s ease, -moz-box-shadow 0.4s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, -webkit-transform 0.4s ease, -webkit-box-shadow 0.4s ease;
     cursor: pointer;
     z-index: 2; 
 }
@@ -162,20 +138,18 @@ nav ul {
 .poster-card-darkred img:hover,
 .poster-card-white img:hover {
     -webkit-transform: scale(1.04);
-       -moz-transform: scale(1.04);
         -ms-transform: scale(1.04);
-         -o-transform: scale(1.04);
             transform: scale(1.04);
 }
 
-.poster-card-yellow img:hover { -webkit-box-shadow: 0 15px 40px rgba(238, 206, 24, 0.7); -moz-box-shadow: 0 15px 40px rgba(238, 206, 24, 0.7); box-shadow: 0 15px 40px rgba(238, 206, 24, 0.7); }
-.poster-card-lightblue img:hover { -webkit-box-shadow: 0 15px 40px rgba(29, 185, 224, 0.8); -moz-box-shadow: 0 15px 40px rgba(29, 185, 224, 0.8); box-shadow: 0 15px 40px rgba(29, 185, 224, 0.8); }
-.poster-card-green img:hover { -webkit-box-shadow: 0 15px 40px rgba(15, 189, 59, 0.6); -moz-box-shadow: 0 15px 40px rgba(15, 189, 59, 0.6); box-shadow: 0 15px 40px rgba(15, 189, 59, 0.6); }
-.poster-card-brown img:hover { -webkit-box-shadow: 0 15px 40px rgba(83, 42, 4, 0.932); -moz-box-shadow: 0 15px 40px rgba(83, 42, 4, 0.932); box-shadow: 0 15px 40px rgba(83, 42, 4, 0.932); }
-.poster-card-blue img:hover { -webkit-box-shadow: 0 15px 40px rgba(19, 3, 107, 0.863); -moz-box-shadow: 0 15px 40px rgba(19, 3, 107, 0.863); box-shadow: 0 15px 40px rgba(19, 3, 107, 0.863); }
-.poster-card-red img:hover { -webkit-box-shadow: 0 15px 40px rgba(226, 28, 25, 0.774); -moz-box-shadow: 0 15px 40px rgba(226, 28, 25, 0.774); box-shadow: 0 15px 40px rgba(226, 28, 25, 0.774); }
-.poster-card-darkred img:hover { -webkit-box-shadow: 0 15px 40px rgba(129, 11, 11, 0.7); -moz-box-shadow: 0 15px 40px rgba(129, 11, 11, 0.7); box-shadow: 0 15px 40px rgba(129, 11, 11, 0.7); }
-.poster-card-white img:hover { -webkit-box-shadow: 0 15px 40px rgba(243, 242, 242, 0.842); -moz-box-shadow: 0 15px 40px rgba(243, 242, 242, 0.842); box-shadow: 0 15px 40px rgba(243, 242, 242, 0.842); }
+.poster-card-yellow img:hover { -webkit-box-shadow: 0 15px 40px rgba(238, 206, 24, 0.7); box-shadow: 0 15px 40px rgba(238, 206, 24, 0.7); }
+.poster-card-lightblue img:hover { -webkit-box-shadow: 0 15px 40px rgba(29, 185, 224, 0.8); box-shadow: 0 15px 40px rgba(29, 185, 224, 0.8); }
+.poster-card-green img:hover { -webkit-box-shadow: 0 15px 40px rgba(15, 189, 59, 0.6); box-shadow: 0 15px 40px rgba(15, 189, 59, 0.6); }
+.poster-card-brown img:hover { -webkit-box-shadow: 0 15px 40px rgba(83, 42, 4, 0.932); box-shadow: 0 15px 40px rgba(83, 42, 4, 0.932); }
+.poster-card-blue img:hover { -webkit-box-shadow: 0 15px 40px rgba(19, 3, 107, 0.863); box-shadow: 0 15px 40px rgba(19, 3, 107, 0.863); }
+.poster-card-red img:hover { -webkit-box-shadow: 0 15px 40px rgba(226, 28, 25, 0.774); box-shadow: 0 15px 40px rgba(226, 28, 25, 0.774); }
+.poster-card-darkred img:hover { -webkit-box-shadow: 0 15px 40px rgba(129, 11, 11, 0.7); box-shadow: 0 15px 40px rgba(129, 11, 11, 0.7); }
+.poster-card-white img:hover { -webkit-box-shadow: 0 15px 40px rgba(243, 242, 242, 0.842); box-shadow: 0 15px 40px rgba(243, 242, 242, 0.842); }
 
 .footer-container {
     background-color: #1a1a1a;
@@ -187,18 +161,12 @@ nav ul {
 
 .footer-content {
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-       -moz-box-pack: justify;
        -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-box-align: center;
-    -webkit-align-items: center;
-       -moz-box-align: center;
        -ms-flex-align: center;
             align-items: center;
     max-width: 1200px;
@@ -218,8 +186,6 @@ nav ul {
 
 .footer-links {
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     gap: 25px;
@@ -230,8 +196,6 @@ nav ul {
     color: #aaaaaa;
     font-size: 15px;
     -webkit-transition: color 0.3s ease;
-    -o-transition: color 0.3s ease;
-    -moz-transition: color 0.3s ease;
     transition: color 0.3s ease;
 }
 
@@ -245,17 +209,13 @@ nav ul {
     display: block;
     -webkit-transition: -webkit-transform 0.3s ease;
     transition: -webkit-transform 0.3s ease;
-    -o-transition: o-transform 0.3s ease;
-    -moz-transition: transform 0.3s ease, -moz-transform 0.3s ease;
     transition: transform 0.3s ease;
-    transition: transform 0.3s ease, -webkit-transform 0.3s ease, -moz-transform 0.3s ease, -o-transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .footer-logo img:hover {
     -webkit-transform: scale(1.05);
-       -moz-transform: scale(1.05);
         -ms-transform: scale(1.05);
-         -o-transform: scale(1.05);
             transform: scale(1.05);
 }
 
@@ -263,15 +223,10 @@ nav ul {
     .posters-container {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-           -moz-box-orient: vertical;
-           -moz-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
         gap: 30px;
         -webkit-box-align: center;
-        -webkit-align-items: center;
-           -moz-box-align: center;
            -ms-flex-align: center;
                 align-items: center;
     }
@@ -280,9 +235,6 @@ nav ul {
     .poster-card-brown, .poster-card-blue, .poster-card-darkred, .poster-card-red {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-           -moz-box-orient: vertical;
-           -moz-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
     }
@@ -298,9 +250,6 @@ nav ul {
     .header-container {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-           -moz-box-orient: vertical;
-           -moz-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
         gap: 15px;
@@ -310,20 +259,15 @@ nav ul {
 
     nav ul {
         gap: 15px;
-        -webkit-flex-wrap: wrap;
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         -webkit-box-pack: center;
-        -webkit-justify-content: center;
-           -moz-box-pack: center;
            -ms-flex-pack: center;
                 justify-content: center;
     }
 
     .posters-container {
         -webkit-box-pack: center;
-        -webkit-justify-content: center;
-           -moz-box-pack: center;
            -ms-flex-pack: center;
                 justify-content: center;
     }
@@ -331,9 +275,6 @@ nav ul {
     .footer-content {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-           -moz-box-orient: vertical;
-           -moz-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
         gap: 25px;
@@ -343,9 +284,6 @@ nav ul {
     .footer-links {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-           -moz-box-orient: vertical;
-           -moz-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
         gap: 12px;

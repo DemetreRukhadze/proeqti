@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
             box-sizing: border-box;
 }
 
@@ -14,18 +13,12 @@ body {
 
 .header-container {
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-       -moz-box-pack: justify;
        -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-box-align: center;
-    -webkit-align-items: center;
-       -moz-box-align: center;
        -ms-flex-align: center;
             align-items: center;
     padding: 20px 8%;
@@ -59,13 +52,9 @@ body {
 nav ul {
     list-style: none;
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -webkit-align-items: center;
-       -moz-box-align: center;
        -ms-flex-align: center;
             align-items: center;
     gap: 30px;
@@ -77,8 +66,6 @@ nav ul {
     font-size: 16px;
     font-weight: 400;
     -webkit-transition: color 0.3s ease;
-    -o-transition: color 0.3s ease;
-    -moz-transition: color 0.3s ease;
     transition: color 0.3s ease;
 }
 
@@ -96,25 +83,16 @@ nav ul {
     padding-top: 140px;
     min-height: 80vh;
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-       -moz-box-orient: vertical;
-       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-box-align: center;
-    -webkit-align-items: center;
-       -moz-box-align: center;
        -ms-flex-align: center;
             align-items: center;
     -webkit-box-pack: center;
-    -webkit-justify-content: center;
-       -moz-box-pack: center;
        -ms-flex-pack: center;
             justify-content: center;
     padding-left: 8%;
@@ -131,184 +109,134 @@ nav ul {
     text-transform: uppercase;
 }
 
-.quiz-subtitle {
-    color: #aaaaaa;
-    font-size: 15px;
-    line-height: 1.5;
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-.single-window-quiz {
-    max-width: 600px;
-    width: 100%;
-    margin-bottom: 50px;
-}
-
-.step-trigger, .quiz-options input[type="radio"] {
-    display: none !important;
-}
-
-.quiz-step {
-    display: none;
-    background-color: #1a1a1a;
-    border: 1px solid #2d2d2d;
-    -webkit-border-radius: 12px;
-       -moz-border-radius: 12px;
-            border-radius: 12px;
-    padding: 30px;
-    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-       -moz-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+.news-list-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-       -moz-box-orient: vertical;
-       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 25px;
     width: 100%;
+    margin-bottom: 60px;
 }
 
-.step-trigger:checked + .quiz-step {
+.news-row-card {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    -webkit-transition: -webkit-transform 0.2s ease;
+    transition: -webkit-transform 0.2s ease;
+    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+.news-row-card[open] {
+    -webkit-transform: scale(1.01);
+        -ms-transform: scale(1.01);
+            transform: scale(1.01);
+}
+
+.yellow-theme { border-left: 5px solid #ffc107; }
+.lightblue-theme { border-left: 5px solid #00bcd4; }
+.green-theme { border-left: 5px solid #0fbd3b; }
+
+.news-summary {
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
+    cursor: pointer;
+    list-style: none;
+    outline: none;
 }
 
-.quiz-image {
-    width: 100%;
+.news-summary::-webkit-details-marker {
+    display: none;
+}
+
+.news-image-wrapper {
+    width: 250px;
+    min-width: 250px;
+    height: 160px;
     overflow: hidden;
-    -webkit-border-radius: 8px;
-       -moz-border-radius: 8px;
-            border-radius: 8px;
-    -webkit-box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-       -moz-box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-.quiz-image img {
+.news-image-wrapper img {
     width: 100%;
-    height: auto;
-    max-height: 400px;
-    object-fit: cover;
-    display: block;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
-.quiz-options {
+.news-preview-info {
+    padding: 20px 25px;
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-       -moz-box-orient: vertical;
-       -moz-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 12px;
-}
-
-.option-btn {
-    display: block;
-    padding: 14px 20px;
-    background-color: #121212;
-    border: 1px solid #2d2d2d;
-    -webkit-border-radius: 6px;
-       -moz-border-radius: 6px;
-            border-radius: 6px;
-    color: #cccccc;
-    font-size: 15px;
-    cursor: pointer;
-    font-weight: 500;
-    -webkit-transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-    -o-transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-    -moz-transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-}
-
-.option-btn:hover {
-    border-color: #ffc107;
-    color: #ffffff;
-    background-color: #161616;
-}
-
-.next-step-btn {
-    display: none;
-    text-align: center;
-    background-color: #ffc107;
-    color: #121212;
-    padding: 14px;
-    -webkit-border-radius: 6px;
-       -moz-border-radius: 6px;
-            border-radius: 6px;
-    font-weight: 700;
-    cursor: pointer;
-    margin-top: 15px;
-    font-size: 14px;
-    -webkit-transition: background-color 0.2s;
-    -o-transition: background-color 0.2s;
-    -moz-transition: background-color 0.2s;
-    transition: background-color 0.2s;
-}
-
-.next-step-btn:hover {
-    background-color: #e0a800;
-}
-
-.dynamic-hints .opt1-radio:checked ~ .btn-1,
-.dynamic-hints .opt2-radio:checked ~ .btn-2,
-.dynamic-hints .opt3-radio:checked ~ .btn-3,
-.dynamic-hints .opt4-radio:checked ~ .btn-4 {
-    background-color: #0fbd3b !important;
-    border-color: #19e247 !important;
-    color: #ffffff !important;
-}
-
-.dynamic-hints .opt1-radio.wrong-input:checked ~ .btn-1,
-.dynamic-hints .opt2-radio.wrong-input:checked ~ .btn-2,
-.dynamic-hints .opt3-radio.wrong-input:checked ~ .btn-3,
-.dynamic-hints .opt4-radio.wrong-input:checked ~ .btn-4 {
-    background-color: #811111 !important;
-    border-color: #e21c19 !important;
-    color: #ffffff !important;
-}
-
-.dynamic-hints .wrong-input:checked ~ .opt1-radio.correct-input ~ .btn-1,
-.dynamic-hints .wrong-input:checked ~ .opt2-radio.correct-input ~ .btn-2,
-.dynamic-hints .wrong-input:checked ~ .opt3-radio.correct-input ~ .btn-3,
-.dynamic-hints .wrong-input:checked ~ .opt4-radio.correct-input ~ .btn-4 {
-    border: 2px solid #0fbd3b !important;
-    color: #19e247 !important;
-    background-color: #132216 !important;
-}
-
-.quiz-options input[type="radio"]:checked ~ .option-btn {
-    pointer-events: none;
-}
-
-.quiz-options input[type="radio"]:checked ~ .next-step-btn {
-    display: block;
-}
-
-.quiz-results-card {
-    text-align: center;
-    padding: 20px 0;
+    -webkit-box-pack: center;
+       -ms-flex-pack: center;
+            justify-content: center;
+    gap: 8px;
     width: 100%;
 }
 
-.quiz-results-card h2 {
-    color: #ffc107;
-    margin-bottom: 15px;
+.news-preview-info h3 {
+    font-size: 20px;
+    color: #ffffff;
+    margin: 0;
 }
 
-.quiz-results-card p {
+.news-date {
     color: #aaaaaa;
+    font-size: 14px;
+}
+
+.read-more-indicator {
+    color: #ffc107;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.news-full-content {
+    padding: 0 25px 25px 250px; 
+    color: #cccccc;
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-animation: fadeIn 0.3s ease;
+            animation: fadeIn 0.3s ease;
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; -webkit-transform: translateY(-5px); transform: translateY(-5px); }
+    to { opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; -webkit-transform: translateY(-5px); transform: translateY(-5px); }
+    to { opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); }
+}
+
+@media screen and (max-width: 768px) {
+    .news-summary {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    .news-image-wrapper {
+        width: 100%;
+        height: 200px;
+    }
+    .news-full-content {
+        padding: 20px;
+    }
 }
 
 .footer-container {
@@ -321,18 +249,12 @@ nav ul {
 
 .footer-content {
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-       -moz-box-pack: justify;
        -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-box-align: center;
-    -webkit-align-items: center;
-       -moz-box-align: center;
        -ms-flex-align: center;
             align-items: center;
     max-width: 1200px;
@@ -352,8 +274,6 @@ nav ul {
 
 .footer-links {
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     gap: 25px;
@@ -364,8 +284,6 @@ nav ul {
     color: #aaaaaa;
     font-size: 15px;
     -webkit-transition: color 0.3s ease;
-    -o-transition: color 0.3s ease;
-    -moz-transition: color 0.3s ease;
     transition: color 0.3s ease;
 }
 
@@ -379,17 +297,13 @@ nav ul {
     display: block;
     -webkit-transition: -webkit-transform 0.3s ease;
     transition: -webkit-transform 0.3s ease;
-    -o-transition: o-transform 0.3s ease;
-    -moz-transition: transform 0.3s ease, -moz-transform 0.3s ease;
     transition: transform 0.3s ease;
-    transition: transform 0.3s ease, -webkit-transform 0.3s ease, -moz-transform 0.3s ease, -o-transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .footer-logo img:hover {
     -webkit-transform: scale(1.05);
-       -moz-transform: scale(1.05);
         -ms-transform: scale(1.05);
-         -o-transform: scale(1.05);
             transform: scale(1.05);
 }
 
@@ -397,9 +311,6 @@ nav ul {
     .header-container {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-           -moz-box-orient: vertical;
-           -moz-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
         gap: 15px;
@@ -409,12 +320,9 @@ nav ul {
 
     nav ul {
         gap: 15px;
-        -webkit-flex-wrap: wrap;
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         -webkit-box-pack: center;
-        -webkit-justify-content: center;
-           -moz-box-pack: center;
            -ms-flex-pack: center;
                 justify-content: center;
     }
@@ -446,9 +354,6 @@ nav ul {
     .footer-content {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-           -moz-box-orient: vertical;
-           -moz-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
         gap: 25px;
@@ -458,9 +363,6 @@ nav ul {
     .footer-links {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-           -moz-box-orient: vertical;
-           -moz-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
         gap: 12px;

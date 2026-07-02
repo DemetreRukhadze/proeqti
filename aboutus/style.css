@@ -291,3 +291,61 @@ nav ul {
         -ms-transform: scale(1.05);
             transform: scale(1.05);
 }
+
+@media (max-width: 768px) {
+
+    .header-container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        position: static;
+    }
+
+    nav ul {
+        gap: 15px;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: center;
+           -ms-flex-pack: center;
+                justify-content: center;
+    }
+
+    #title {
+        font-size: 20px;
+    }
+
+    .mission-wrapper {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 0;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .faq-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .faq-answer {
+        height: auto;
+        max-height: 250px; 
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+}

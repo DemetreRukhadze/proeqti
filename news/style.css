@@ -157,7 +157,9 @@ nav ul {
     display: none;
 }
 
+/* ვალიდაციისთვის განახლებული კონტეინერები (span-ები) */
 .news-image-wrapper {
+    display: block;
     width: 250px;
     min-width: 250px;
     height: 160px;
@@ -172,7 +174,7 @@ nav ul {
 }
 
 .news-preview-info {
-    padding: 20px 25px;
+    padding: 15px 25px; /* ზედა პედინგი დავაკელით 20-დან 15-მდე, რომ ტექსტი უფრო ზემოთ ავიდეს */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -187,6 +189,25 @@ nav ul {
     width: 100%;
 }
 
+/* 📰 ახალი სტილი სტატიის სათაურისთვის (გახდა ნამდვილი BOLD და აიწია ზემოთ) */
+.news-title-span {
+    display: block;
+    font-size: 20px;
+    font-weight: 700; /* Fira GO-ს სქელი შრიფტი */
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* 📅 ახალი სტილი თარიღისთვის */
+.news-date-span {
+    display: block;
+    color: #aaaaaa;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* ძველი სტილები შენარჩუნებულია ყოველი შემთხვევისთვის */
 .news-preview-info h3 {
     font-size: 20px;
     color: #ffffff;
